@@ -42,8 +42,10 @@ public class StudentEntity {
     @Column(name = "nic", nullable = false)
     private String nic;
 
+    //Composite Attribute
     private StudentName name;
 
+    //Multi-Valued Attribute
     @ElementCollection
     @CollectionTable(name = "student_mobile", joinColumns = @JoinColumn(name = "student_id"))
     private List<String> mobiles;
